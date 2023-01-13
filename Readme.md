@@ -1,0 +1,17 @@
+How to program micronucleus bootloader on blank ATTiny85
+
+1. telecharge the bootloader .hex sur  : https://github.com/micronucleus/micronucleus
+
+Prépare the Arduino to act as a ISP :
+
+
+On PowerShell, go to :
+C:\Users\jojo\Documents\ArduinoData\packages\arduino\tools\avrdude\6.3.0-arduino18\bin
+
+Then Use thise for the fuse :
+./avrdude.exe -CC:\Users\jojo\Documents\ArduinoData\packages\ATTinyCore\hardware\avr\1.5.2/avrdude.conf -v -pattiny85 -cstk500v1 -PCOM4 -b19200 -U lfuse:w:0xe1:m -U hfuse:w:0xdd:m -U efuse:w:0xfe:m -B 20
+
+And this for the bootloader 
+./avrdude.exe -CC:\Users\jojo\Documents\ArduinoData\packages\ATTinyCore\hardware\avr\1.5.2/avrdude.conf -c avrisp -p attiny85 -PCOM4 -b19200 -U flash:w:c:\Users\jojo\Downloads\micronucleus\firmware\releases\t85_default.hex:i
+
+
