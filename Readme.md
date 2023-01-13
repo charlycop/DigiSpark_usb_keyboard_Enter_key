@@ -1,17 +1,13 @@
-How to program micronucleus bootloader on blank ATTiny85
+# How to program micronucleus bootloader on blank ATTiny85
 
-1. telecharge the bootloader .hex sur  : https://github.com/micronucleus/micronucleus
+## 1. Download micronucleus .hex file for attiny85  : https://github.com/micronucleus/micronucleus
 
-Prépare the Arduino to act as a ISP :
+## 2. Prepare the Arduino to act as a ISP :
 
+Look in the [Arduino_as_ISP folder]([DigiSpark_usb_keyboard_Enter_key/Prepare ATtiny85/Arduino_as_ISP at master · charlycop/DigiSpark_usb_keyboard_Enter_key · GitHub](https://github.com/charlycop/DigiSpark_usb_keyboard_Enter_key/tree/master/Prepare%20ATtiny85/Arduino_as_ISP)).
 
-On PowerShell, go to :
-C:\Users\jojo\Documents\ArduinoData\packages\arduino\tools\avrdude\6.3.0-arduino18\bin
+## 3. Use the batch script write the fuse and bootloader
 
-Then Use thise for the fuse :
-./avrdude.exe -CC:\Users\jojo\Documents\ArduinoData\packages\ATTinyCore\hardware\avr\1.5.2/avrdude.conf -v -pattiny85 -cstk500v1 -PCOM4 -b19200 -U lfuse:w:0xe1:m -U hfuse:w:0xdd:m -U efuse:w:0xfe:m -B 20
-
-And this for the bootloader 
-./avrdude.exe -CC:\Users\jojo\Documents\ArduinoData\packages\ATTinyCore\hardware\avr\1.5.2/avrdude.conf -c avrisp -p attiny85 -PCOM4 -b19200 -U flash:w:c:\Users\jojo\Downloads\micronucleus\firmware\releases\t85_default.hex:i
+ Look in the batch script [here]([DigiSpark_usb_keyboard_Enter_key/Prepare ATtiny85 at master · charlycop/DigiSpark_usb_keyboard_Enter_key · GitHub](https://github.com/charlycop/DigiSpark_usb_keyboard_Enter_key/tree/master/Prepare%20ATtiny85)
 
 
