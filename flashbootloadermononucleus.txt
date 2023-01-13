@@ -15,15 +15,3 @@ And this for the bootloader
 ./avrdude.exe -CC:\Users\jojo\Documents\ArduinoData\packages\ATTinyCore\hardware\avr\1.5.2/avrdude.conf -c avrisp -p attiny85 -PCOM4 -b19200 -U flash:w:c:\Users\jojo\Downloads\micronucleus\firmware\releases\t85_default.hex:i
 
 
-
-MDP AMAZON : WJsaUKnUrn33Yd
-
-
-clipperz : pouletpalooza
-pass pRY95HM8uz5aEM
-
-git init
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/charlycop/DigiSpark_usb_keyboard_Enter_key.git
-git push -u origin main
