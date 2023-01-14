@@ -9,7 +9,7 @@
 #define DEBOUNCE                              10 // time to wait in milli secs
 #define BUTTON_PIN                             2 // PIN P2
 #define BUTTON_PIN_INT                         0 // INT0 (PIN P2)
-#define KEYSTROKE                (byte)KEY_ENTER
+#define KEYSTROKE                (byte)KEY_ENTER // Keystroke we want to to, and casting to avoid warning
 
 // Macros
 #define TOGGLE_LED(led) digitalWrite(led, !digitalRead(led))

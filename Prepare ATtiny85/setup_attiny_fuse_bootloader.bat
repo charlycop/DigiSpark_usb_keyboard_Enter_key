@@ -1,12 +1,17 @@
 set AVRDUDE_PATH=C:\Users\jojo\Documents\ArduinoData\packages\arduino\tools\avrdude\6.3.0-arduino18\bin
 set config-file=C:\Users\jojo\Documents\ArduinoData\packages\ATTinyCore\hardware\avr\1.5.2
 set firmware_PATH=Micronucleus\firmware\releases
-set BOOTLOADER=t85_default.hex
 set port=COM4
 set baudrate=19200
 set partno=t85
 set programmer=stk500v1 
 set bitclock=20
+
+REM UNCOMMENT THE BOOTLOADER YOU WANT
+set BOOTLOADER=t85_default.hex
+REM set BOOTLOADER=micronucleus-1.11-ledpb1.hex
+REM set BOOTLOADER=micronucleus-1.02.hex
+
 @echo off
 
 :MENU
